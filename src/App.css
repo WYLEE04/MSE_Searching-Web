@@ -1,0 +1,1121 @@
+/* 글로벌 스타일 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* 앱 컨테이너 */
+.App {
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+/* 헤더 네비게이션 */
+.header-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #5a67d8;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: #edf2f7;
+  color: #5a67d8;
+}
+
+.nav-link.active {
+  background: #5a67d8;
+  color: white;
+}
+
+/* 메인 컨테이너 */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* 로고 섹션 */
+.logo-section {
+  margin-bottom: 3rem;
+}
+
+.main-logo {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+}
+
+.main-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.main-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* 검색 섹션 */
+.search-section {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-container:focus-within {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.search-input {
+  flex: 1;
+  padding: 1.25rem 2rem;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  background: transparent;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.search-button {
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  transform: scale(1.05);
+}
+
+/* 추천 검색어 */
+.search-suggestions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.suggestion-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.suggestion-tag:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* 기능 카드들 */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== 다른 페이지들 (기존 스타일 유지하되 개선) ===== */
+
+/* 컨테이너 (다른 페이지들용) */
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+table th, table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+table tr:hover {
+  background: #f7fafc;
+}
+
+/* 버튼 스타일 */
+.btn, .btn-detail {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover, .btn-detail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* 백 버튼 */
+.back-button {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* 에러 메시지 */
+.error {
+  color: #e53e3e;
+  background: #fed7d7;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px solid #feb2b2;
+}
+
+/* 승패 표시 */
+.win {
+  color: #38a169;
+  font-weight: 600;
+}
+
+.lose {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+.ongoing {
+  color: #ed8936;
+  font-weight: 600;
+}
+
+/* 라운드 카드 */
+.round-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: #f7fafc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.round-winner {
+  text-align: right;
+  color: #38a169;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.players-info {
+  display: flex;
+  gap: 2rem;
+}
+
+.player {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player h4 {
+  margin-top: 0;
+  color: #2d3748;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.player ul {
+  padding-left: 1.5rem;
+  list-style-type: none;
+}
+
+.player li {
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.player li:before {
+  content: "⚡";
+  position: absolute;
+  left: -1.5rem;
+}
+
+/* 랭킹 페이지 스타일 */
+.ranking-list {
+  margin-top: 2rem;
+}
+
+.rank-cell {
+  text-align: center;
+  font-weight: 600;
+}
+
+.rank-number {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.rank-icon {
+  font-size: 1.5rem;
+}
+
+.player-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.score {
+  text-align: center;
+}
+
+.score-value {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #38a169;
+}
+
+/* 순위별 색상 */
+.rank-gold {
+  background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+}
+
+.rank-gold:hover {
+  background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+}
+
+.rank-silver {
+  background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+}
+
+.rank-silver:hover {
+  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);
+}
+
+.rank-bronze {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+}
+
+.rank-bronze:hover {
+  background: linear-gradient(135deg, #fdba74 0%, #fb923c 100%);
+}
+
+/* 게임 리스트 */
+.game-list {
+  margin-top: 2rem;
+}
+
+/* 페이지 헤더 */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* 로딩 및 기타 상태 */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: #718096;
+  background: white;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem;
+  color: #a0aec0;
+  font-size: 1.1rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .main-logo {
+    font-size: 2.5rem;
+  }
+
+  .main-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .search-input {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .search-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .players-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  table th, table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .rank-number {
+    font-size: 1rem;
+  }
+
+  .rank-icon {
+    font-size: 1.25rem;
+  }
+}
+/* PlayerProfile 관련 CSS - 기존 App.css 맨 아래에 추가 */
+
+/* Recent Searches 스타일 */
+.recent-searches {
+  margin-top: 1.5rem;
+}
+
+.recent-searches-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0 1rem;
+}
+
+.recent-searches-title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.clear-searches-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-searches-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+}
+
+.recent-tag {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.recent-tag:hover {
+  background: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Profile Container */
+.profile-container {
+  min-height: 100vh;
+  background: #f0f2f5;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Profile Sidebar */
+.profile-sidebar {
+  width: 320px;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 2rem 1.5rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-logo {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sidebar-logo a {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  letter-spacing: -2px;
+}
+
+.player-info-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.player-name-large {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.player-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.player-stats-grid .stat-item {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.player-stats-grid .stat-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.player-stats-grid .stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.player-stats-grid .stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.most-used-cards-sidebar {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.most-used-cards-sidebar h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.card-rank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-rank-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.card-rank-item:hover {
+  background: #e2e8f0;
+  transform: translateX(4px);
+}
+
+.card-rank-number {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.1rem;
+  min-width: 25px;
+}
+
+.card-rank-item .card-info {
+  flex: 1;
+}
+
+.card-rank-item .card-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.card-rank-item .card-usage {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Profile Main */
+.profile-main {
+  flex: 1;
+  margin-left: 320px;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.player-search-form {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+}
+.player-search-input {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px 0 0 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+ }
+ 
+ .player-search-input:focus {
+  border-color: #667eea;
+ }
+ 
+ .search-btn {
+  padding: 0.875rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+ }
+ 
+ .search-btn:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  transform: scale(1.02);
+ }
+ 
+ .ranking-button {
+  padding: 0.875rem 1.5rem;
+  background: #f3f4f6;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid #d1d5db;
+ }
+ 
+ .ranking-button:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+ }
+ 
+ /* Stats Overview */
+ .stats-overview-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+ }
+ 
+ .winrate-display {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+ }
+ 
+ .winrate-chart {
+  position: relative;
+ }
+ 
+ .winrate-pie {
+  width: 120px;
+  height: 120px;
+ }
+ 
+ .win-arc {
+  transition: stroke-dasharray 0.8s ease;
+  stroke-linecap: round;
+ }
+ 
+ .winrate-percentage {
+  font-size: 18px;
+  font-weight: 700;
+  fill: #1f2937;
+ }
+ 
+ .winrate-text {
+  text-align: left;
+ }
+ 
+ .recent-record-title {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+ }
+ 
+ .win-loss-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+ }
+ 
+ .most-played-info {
+  display: flex;
+  gap: 2rem;
+ }
+ 
+ .most-played-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  min-width: 180px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+ }
+ 
+ .most-played-item:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+ }
+ 
+ .played-icon {
+  font-size: 2.5rem;
+ }
+ 
+ .played-details {
+  text-align: left;
+ }
+ 
+ .played-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+ }
+ 
+ .played-rate {
+  font-size: 0.9rem;
+  color: #059669;
+  font-weight: 600;
+ }
+ 
+ /* Match History */
+ .match-history-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+ }
+ 
+ .match-history-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f3f4f6;
+ }
+ 
+ .match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ }
+ 
+ .match-record {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  position: relative;
+ }
+ 
+ .match-record.win {
+  background: linear-gradient(90deg, #dbeafe 0%, #f0f9ff 100%);
+  border-left: 4px solid #3b82f6;
+ }
+ 
+ .match-record.loss {
+  background: linear-gradient(90deg, #fee2e2 0%, #fef2f2 100%);
+  border-left: 4px solid #ef4444;
+ }
+ 
+ .match-record.ongoing {
+  background: linear-gradient(90deg, #fef3c7 0%, #fffbeb 100%);
+  border-left: 4px solid #f59e0b;
+ }
+ 
+ .match-record:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .match-player-side {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+ }
+ 
+ .match-result-indicator {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .match-record.win .match-result-indicator {
+  background: #3b82f6;
+ }
+ 
+ .match-record.loss .match-result-indicator {
+  background: #ef4444;
+ }
+ 
+ .match-record.ongoing .match-result-indicator {
+  background: #f59e0b;
+ }
+ 
+ .player-match-details {
+  flex: 1;
+ }
+ 
+ .player-match-name {
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+ }
+ 
+ .match-faction-character {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+ }
+ 
+ .match-cards {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  line-height: 1.4;
+ }
+ 
+ .match-vs-divider {
+  font-weight: 700;
+  color: #6b7280;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+ }
+ 
+ .match-opponent-side {
+  flex: 1;
+  text-align: right;
+ }
+ 
+ .opponent-match-details {
+  flex: 1;
+ }
+ 
+ .opponent-match-name {
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+ }
+ 
+ .match-final-score {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1.1rem;
+  min-width: 100px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+ }
+ 
+ /* 반응형 디자인 */
+ @media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+  
+  .profile-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+  
+  .profile-main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  
+  .stats-overview-section {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .most-played-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .most-played-item {
+    justify-content: center;
+    min-width: auto;
+  }
+  
+  .match-record {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  
+  .match-player-side,
+  .match-opponent-side {
+    width: 100%;
+  }
+  
+  .match-opponent-side {
+    text-align: left;
+  }
+  
+  .match-vs-divider {
+    padding: 0;
+    align-self: center;
+  }
+  
+  .match-final-score {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .player-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .search-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .player-search-form {
+    max-width: none;
+  }
+ }
