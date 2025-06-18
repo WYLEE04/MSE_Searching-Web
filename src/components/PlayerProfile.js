@@ -360,9 +360,9 @@ function PlayerProfile() {
                   {/* Score */}
                   <div className="match-final-score">
                     {result === 'win' ? 
-                      `${playerInfo.isPlayer1 ? game.player1Wins || 3 : game.player2Wins || 3} : ${playerInfo.isPlayer1 ? game.player2Wins || 1 : game.player1Wins || 1}` : 
+                      `${playerInfo.isPlayer1 ? game.player1Wins  : game.player2Wins} : ${playerInfo.isPlayer1 ? game.player2Wins  : game.player1Wins}` : 
                      result === 'loss' ? 
-                      `${playerInfo.isPlayer1 ? game.player1Wins || 1 : game.player2Wins || 1} : ${playerInfo.isPlayer1 ? game.player2Wins || 3 : game.player1Wins || 3}` : 
+                      `${playerInfo.isPlayer1 ? game.player1Wins : game.player2Wins} : ${playerInfo.isPlayer1 ? game.player2Wins  : game.player1Wins}` : 
                      'In Progress'}
                   </div>
                 </div>
